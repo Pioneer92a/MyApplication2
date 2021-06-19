@@ -19,10 +19,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 private const val TAG = "MainActivity"
-//private lateinit var fusedLocationClient: FusedLocationProviderClient
 
-//abstract class MainActivity : AppCompatActivity(), GetRawData.GetRawDataInterface,
-//    GetJsonData.OnDataAvailable {
     class MainActivity : AppCompatActivity(), GetRawData.GetRawDataInterface, GetJsonData.GetJsonDataInterface {
     private val city = "islamabad,pk"
     private val api = "0e2d77d481bcfa957f3841c0875961a6"

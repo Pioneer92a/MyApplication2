@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="DHAKA, BD"
-                android:textColor="@color/white"
+                android:textColor="@color/purple_200"
                 android:textSize="24dp" />
 
             <TextView
@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20 April 2012, 20:08 PM"
-                android:textColor="@color/teal_200"
+                android:textColor="@color/purple_200"
                 android:textSize="14dp" />
         </LinearLayout>
 
@@ -50,6 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Clear Sky"
+                android:textColor="@color/black"
                 android:textSize="18dp" />
 
             <TextView
@@ -59,6 +60,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-thin"
                 android:text="29°C"
+                android:textColor="@color/black"
                 android:textSize="90dp" />
 
             <LinearLayout
@@ -110,8 +112,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunny"
-                        app:tint="#FFFFFF" />
+                        android:src="@drawable/sunrise" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -147,8 +148,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunny"
-                        app:tint="#FFFFFF" />
+                        android:src="@drawable/sunset" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -184,8 +184,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunny"
-                        app:tint="#FFFFFF" />
+                        android:src="@drawable/wind" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -228,8 +227,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunny"
-                        app:tint="#FFFFFF" />
+                        android:src="@drawable/pressure" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -265,7 +263,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/thermostat"
+                        android:src="@drawable/humid"
                         app:tint="#FFFFFF" />
 
                     <Space
@@ -302,8 +300,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunny"
-                        app:tint="#FFFFFF" />
+                        android:src="@drawable/weather" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -319,7 +316,7 @@
                         android:id="@+id/about"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="AndroDocs"
+                        android:text="MSA"
                         android:textSize="14dp" />
                 </LinearLayout>
             </LinearLayout>
