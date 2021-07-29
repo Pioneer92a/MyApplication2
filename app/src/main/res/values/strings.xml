@@ -9,4 +9,14 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="dhaka_bd">DHAKA, BD</string>
+    <string name="islamabad_pk">islamabad,pk</string>
+    <string name="default_date_time">20 April 2012, 20:08 PM</string>
+    <string name="default_min_temp">Min Temp: 05:05 AM</string>
+    <string name="default_temp">29°C</string>
+    <string name="default_sunrise">06:40 AM</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="default_weather">Clear Sky</string>
+    <string name="default_max_temp">Max Temp: 05:05 PM</string>
 </resources>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     android:orientation="vertical"
-    android:padding="25dp">
+    android:padding="13dp">
 
     <RelativeLayout
         android:id="@+id/mainContainer"
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/dhaka_bd"
                 android:textColor="@color/purple_200"
-                android:textSize="24sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/updated_at"
@@ -41,7 +41,9 @@
             android:id="@+id/overviewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_below="@+id/addressContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <TextView
@@ -51,7 +53,7 @@
                 android:layout_gravity="center"
                 android:text="@string/default_weather"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/temp"
@@ -61,7 +63,7 @@
                 android:fontFamily="sans-serif-thin"
                 android:text="@string/default_temp"
                 android:textColor="@color/black"
-                android:textSize="80sp" />
+                android:textSize="38sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -107,7 +109,7 @@
                     android:background="#3CF1EBF1"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="3dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -143,7 +145,7 @@
                     android:background="#3CF1EBF1"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="3dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -179,7 +181,7 @@
                     android:background="#3CF1EBF1"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="3dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -222,7 +224,7 @@
                     android:background="#3CF1EBF1"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="3dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -258,7 +260,7 @@
                     android:background="#3CF1EBF1"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="3dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -295,7 +297,7 @@
                     android:background="#3CF1EBF1"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="3dp">
 
                     <ImageView
                         android:layout_width="25dp"
