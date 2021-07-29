@@ -114,7 +114,8 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunrise" />
+                        android:src="@drawable/sunrise"
+                        android:contentDescription="@string/sunrise" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -123,7 +124,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sunrise"
+                        android:text="@string/sunrise"
                         android:textSize="12sp" />
 
                     <TextView
@@ -150,7 +151,8 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/sunset" />
+                        android:src="@drawable/sunset"
+                        android:contentDescription="@string/sunset" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -159,7 +161,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sunset"
+                        android:text="@string/sunset"
                         android:textSize="12sp" />
 
                     <TextView
@@ -186,7 +188,8 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/wind" />
+                        android:src="@drawable/wind"
+                        android:contentDescription="@string/wind" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -195,7 +198,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wind"
+                        android:text="@string/wind"
                         android:textSize="12sp" />
 
                     <TextView
@@ -229,7 +232,8 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/pressure" />
+                        android:src="@drawable/pressure"
+                        android:contentDescription="@string/pressure" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -238,7 +242,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pressure"
+                        android:text="@string/pressure"
                         android:textSize="12sp" />
 
                     <TextView
@@ -266,7 +270,8 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/humid"
-                        app:tint="#FFFFFF" />
+                        app:tint="#FFFFFF"
+                        android:contentDescription="@string/humidity" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -275,7 +280,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Humidity"
+                        android:text="@string/humidity"
                         android:textSize="12sp" />
 
                     <TextView
@@ -302,7 +307,8 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/weather" />
+                        android:src="@drawable/weather"
+                        android:contentDescription="@string/created_by" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -311,14 +317,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Created By"
+                        android:text="@string/created_by"
                         android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/about"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MSA"
+                        android:text="@string/msa"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         "https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&appid=$api"
 
 
+    @DelicateCoroutinesApi
     override fun onCreate(savedInstanceState: Bundle?) = runBlocking{
         Log.d(TAG, "onCreate: called")
         super.onCreate(savedInstanceState)
@@ -30,21 +31,21 @@ class MainActivity : AppCompatActivity() {
 
         loading()
 
-            val job = GlobalScope.launch(Dispatchers.IO) {
-                val a = fetchData()   //fetch json data and return a dataclass
-                updateData(a)         //use the dataclass to populate the objects
-            }.join() //wait for the job to finish
+        GlobalScope.launch(Dispatchers.IO) {
+            val a = fetchData()   //fetch json data and return a dataclass
+            updateData(a)         //use the dataclass to populate the objects
+        }.join() //wait for the job to finish
 
         showMainScreen()
     }
 
 
 
-    private fun getRawDataCoroutine(str: String): String { //get raw json data
+    private fun String.getRawDataCoroutine(): String { //get raw json data
         var json: String
         Log.d(TAG, ".getRawDataCoroutine called")
         try {
-            json = URL(str).readText(Charsets.UTF_8)
+            json = URL(this).readText(Charsets.UTF_8)
 //            Log.d(TAG, response)
         } catch (e: Exception) {
             Log.e(TAG, ".getRawDataCoroutine: $e")
@@ -74,44 +75,36 @@ class MainActivity : AppCompatActivity() {
         return gson
     }
 
-    private suspend fun fetchData(): DataClass { //fetch json data and return a dataclass
-        val json: String = getRawDataCoroutine(url)
+    private fun fetchData(): DataClass { //fetch json data and return a dataclass
+        val json: String = url.getRawDataCoroutine()
         return getJsonDataCoroutine(json)
     }
 
-    private suspend fun updateData(topic: DataClass) { //use the dataclass to populate the objects
+    private fun updateData(topic: DataClass) { //use the dataclass to populate the objects
 
         /* Populating extracted data into our views */
-        updated_at.text = "Updated at: " + SimpleDateFormat(
+        ("Updated at: " + SimpleDateFormat(
             "$dateFormat $timeFormat",
             Locale.ENGLISH
-        ).format(Date(topic.dt * 1000))
-        temp.text = topic.main.temp.toString() + "°C"
+        ).format(Date(topic.dt * 1000))).also { updated_at.text = it }
+        "${topic.main.temp}°C".also { temp.text = it }
 
-        val tempMin = "Min Temp: " + topic.main.temp_min.toString() + "°C"
-        val tempMax = "Max Temp: " + topic.main.temp_max.toString() + "°C"
-        val pressure1 = topic.main.pressure.toString()
-        val humidity1 = topic.main.humidity.toString()
-        val sunrise1 = topic.sys.sunrise
-        val sunset1 = topic.sys.sunset
-        val windSpeed = topic.wind.speed.toString()
-        address.text =
-            topic.name + ", " + topic.sys.country
+        "${topic.name}, ${topic.sys.country}".also { address.text = it }
 
         status.text = topic.weather[0].description.replaceFirstChar {
             if (it.isLowerCase()) it.titlecase( //this is done to capitalize first letter
                 Locale.getDefault()
             ) else it.toString()
         }
-        temp_min.text = tempMin
-        temp_max.text = tempMax
+        ("Min Temp: " + topic.main.temp_min.toString() + "°C").also { temp_min.text = it }
+        ("Max Temp: " + topic.main.temp_max.toString() + "°C").also { temp_max.text = it }
         sunrise.text =
-            SimpleDateFormat(timeFormat, Locale.ENGLISH).format(Date(sunrise1 * 1000))
+            SimpleDateFormat(timeFormat, Locale.ENGLISH).format(Date(topic.sys.sunrise * 1000))
         sunset.text =
-            SimpleDateFormat(timeFormat, Locale.ENGLISH).format(Date(sunset1 * 1000))
-        wind.text = windSpeed
-        pressure.text = pressure1
-        humidity.text = humidity1
+            SimpleDateFormat(timeFormat, Locale.ENGLISH).format(Date(topic.sys.sunset * 1000))
+        wind.text = topic.wind.speed.toString()
+        pressure.text = topic.main.pressure.toString()
+        humidity.text = topic.main.humidity.toString()
 
     }
 

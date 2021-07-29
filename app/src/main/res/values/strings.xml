@@ -19,4 +19,11 @@
     <string name="something_went_wrong">Something went wrong</string>
     <string name="default_weather">Clear Sky</string>
     <string name="default_max_temp">Max Temp: 05:05 PM</string>
+    <string name="wind">Wind</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="created_by">Created By</string>
+    <string name="msa">MSA</string>
 </resources>
